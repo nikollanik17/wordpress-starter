@@ -1,0 +1,16 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-weight: normal;
+    line-height: 1;
+    @include box-sizing(border-box);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}

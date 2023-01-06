@@ -1,0 +1,29 @@
+.footer {
+    width: 100%;
+    max-height: 250px;
+    height: 250px;
+    background-color: #091522;
+    padding: 32px 20px 30px;
+    margin: 0 auto;
+
+    &__area {
+        background-color: #000000;
+
+        &--left {
+            float: left;
+        }
+
+        &--middle {
+            float: left;
+        }
+
+        &--right {
+            float: right;
+        }
+    }
+
+    &__copyright {
+        color: #ffffff;
+        font-weight: 200;
+    }
+}

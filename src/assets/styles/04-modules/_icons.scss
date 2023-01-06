@@ -1,0 +1,49 @@
+section.icons {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .icons__row {
+        display: table;
+        width: 100%;
+
+        &__item {
+            display: table-cell;
+            padding: 0 20px;
+
+            &__image {
+                padding-bottom: 20px;
+                text-align: center;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            &__text {
+                text-align: center;
+                font-size: 16px;
+                line-height: 22px;
+                color: #000000;
+            }
+        }
+    }
+}
+
+@media (max-width: map-get($grid-breakpoints, lg)) {
+    section.icons {
+        .icons__row {
+            display: block;
+
+            &__item {
+                display: block;
+                padding: 0;
+
+                &__image {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

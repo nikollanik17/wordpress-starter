@@ -1,0 +1,46 @@
+.header {
+    width: 100%;
+    background-color: #444;
+    padding: 17px 0;
+
+    &__left {
+        float: left;
+    }
+
+    &__right {
+        float: right;
+    }
+
+    &__logo {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 24px;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__navigation {
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                color: #fff;
+                font-size: 20px;
+                line-height: 24px;
+                float: left;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+section.image-slider {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .image-slider__slider {
+        position: relative;
+
+        &__prev-arrow, &__next-arrow {
+            display: inline-block;
+            @include transform(translateY(-50%));
+            color: #000000;
+            top: 50%;
+            position: absolute;
+            font-size: 34px;
+            line-height: 34px;
+            cursor: pointer;
+        }
+
+        &__prev-arrow {
+            left: -30px;
+        }
+
+        &__next-arrow {
+            right: -30px;
+        }
+
+        &__item {
+            outline: none;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

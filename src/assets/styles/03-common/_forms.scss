@@ -1,0 +1,211 @@
+.gform_wrapper .gfield input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+.gform_wrapper .gfield textarea,
+input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+textarea {
+    border: 1px solid #eee;
+    color: #000;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 10px 20px;
+    width: 100%;
+    outline:none;
+}
+
+.gform_wrapper .gfield input[type=submit],
+input[type=submit] {
+    background-color: #eee;
+    display: inline-block;
+    border: 0 none;
+    color: #000000;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.gform_wrapper {
+    padding: 0 8px;
+
+    .gform_body {
+        ul.gform_fields {
+            padding-left:0;
+            font-size: 0;
+
+            li.gfield {
+                list-style-type: none;
+                padding: 0 !important;
+                max-width: 100% !important;
+                font-size: 18px;
+
+                &.half-left, &.half-right {
+                    @include box-sizing(border-box);
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 50%;
+                }
+
+                &.half-left {
+                    padding-right: 5px !important;
+                }
+
+                &.half-right {
+                    padding-left: 5px !important;
+                }
+            }
+        }
+
+        .gform_fields {
+            label {
+                color: #000;
+            }
+
+            .gfield_error {
+                .validation_message {
+                    color: #ee0000;
+                }
+            }
+
+            ul.gfield_checkbox {
+                li {
+                    position: relative;
+
+                    label {
+                        margin: 2px 0 0 21px;
+                    }
+
+                    &.gfield.optional .gfield_checkbox label::after {
+                        content: "";
+                        opacity: 1;
+                    }
+
+                    input[type="checkbox"] {
+                        display: none;
+                    }
+
+                    &[class^="gchoice"] label:after,
+                    &[class^="gchoice"] label:before {
+                        bottom: 0;
+                        content: '';
+                        margin: auto;
+                        position: absolute;
+                        top: 0;
+                    }
+
+                    &[class^="gchoice"] label:after {
+                        content: "";
+                        background-color: #fff;
+                        border: solid 1px #3c3c3c;
+                        display: inline-block;
+                        height: 13px;
+                        left: 0;
+                        position: absolute;
+                        top: 0;
+                        transition: left .25s, background-color .13s;
+                        width: 13px;
+                    }
+
+                    input[type="checkbox"]:checked + label:before {
+                        content: "";
+                        background-color: red;
+                        width: 5px;
+                        height: 5px;
+                        font-weight: 700;
+                        left: 4px;
+                        text-align: center;
+                        top: 1px;
+                        z-index: 9;
+                    }
+                }
+            }
+
+            ul.gfield_radio {
+                li {
+                    position: relative;
+
+                    label {
+                        margin: 2px 0 0 21px;
+                    }
+
+                    &.gfield.optional .gfield_radio label::after {
+                        content: "";
+                        opacity: 1;
+                    }
+
+                    input[type="radio"] {
+                        display: none;
+                    }
+
+                    &[class^="gchoice"] label:after,
+                    &[class^="gchoice"] label:before {
+                        bottom: 0;
+                        content: '';
+                        margin: auto;
+                        position: absolute;
+                        top: 0;
+                    }
+
+                    &[class^="gchoice"] label:after {
+                        content: "";
+                        background-color: #fff;
+                        border: solid 1px #3c3c3c;
+                        border-radius: 50%;
+                        display: inline-block;
+                        height: 13px;
+                        left: 0;
+                        position: absolute;
+                        top: 0;
+                        transition: left .25s, background-color .13s;
+                        width: 13px;
+                    }
+
+                    input[type="radio"]:checked + label:before {
+                        content: "●";
+                        color: #00afd5;
+                        font-size: 18.5px;
+                        font-weight: 700;
+                        left: 1px;
+                        text-align: center;
+                        top: -1px;
+                        z-index: 9;
+                    }
+                }
+            }
+        }
+    }
+
+    &.gform_validation_error {
+        div.validation_error {
+            color: #ee0000;
+            text-align: left;
+            border: 0 none;
+            padding: 0 0 16px 0;
+        }
+
+        .gform_body {
+            .validation_message {
+                color: #ee0000;
+                padding-top: 2px;
+            }
+
+            ul.gform_fields {
+                li.gfield.gfield_error {
+                    background-color: transparent;
+                    border: 0 none;
+                }
+
+                li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half) {
+                    padding: 0 !important;
+                    max-width: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+.gform_confirmation_wrapper {
+    .gform_confirmation_message {
+        font-size: 16px;
+        line-height: 22px;
+        color: #000000;
+    }
+}

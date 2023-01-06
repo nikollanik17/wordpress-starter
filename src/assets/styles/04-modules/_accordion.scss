@@ -1,0 +1,26 @@
+section.accordion {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .accordion__item {
+    .accordion__title {
+      cursor: pointer;
+      font-size: 25px;
+      line-height: 28px;
+      color: #000000;
+      padding-bottom: 10px;
+
+      &:hover {
+        @include opacity(0.7);
+      }
+    }
+
+    .accordion__text {
+      p {
+        margin: 0;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
